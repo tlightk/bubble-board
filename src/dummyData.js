@@ -1,7 +1,8 @@
 import { faker } from "@faker-js/faker";
 import { stockImages } from "./stockImages";
+const _ = require("lodash");
 
-const dummyMessages = [
+let dummyMessages = [
     "今日も一緒に働けて幸せだよ！",
     "いつもお疲れ様！もしも今日つらかったら、泣かせてもらってもいいかな？",
     "あなたがいなかったら、私もたぶん休んでたと思う。ありがとうね！",
@@ -50,12 +51,14 @@ const dummyMessages = [
     "君が昼寝をするたびに、僕のパジャマが勝手に洗濯されてしまうんだ。パジャマの自己決定権を侵害されるのは無理だよ！"
 ]
 
+dummyMessages = _.shuffle(dummyMessages);
+
 const dummyData = [];
 
 for (let i = 0; i < 21; i++) {
     dummyData.push({
         id: i,
-        送信日時: faker.date.between('2023-01-01T00:00:00.000Z', '2023-04-01T00:00:00.000Z'),
+        送信日時: faker.date.recent(3),
         Amount: Math.floor(Math.random() * 98 + 2),
         Message: dummyMessages[i],
         ImageURL: stockImages[i]
