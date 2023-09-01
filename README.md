@@ -8,6 +8,8 @@ Created in React (JavaScript) utilizing:
 - tsparticles for particle effects
 - react-transition-group for modals
 
+Deployed via netlify [here](https://astonishing-cupcake-8c76f4.netlify.app/).
+
 ![bubbleboard](https://user-images.githubusercontent.com/24785973/231942755-0a57a754-dda9-434f-999f-399821469eb2.png)
 
 ## Installation
